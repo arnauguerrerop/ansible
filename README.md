@@ -48,7 +48,7 @@ dias: 30d
 ```
 -
 	name: Borrar logs antiguos
-	hosts: prueba
+	hosts: all
 	tasks:
 	
 	# Playbook principal desde el cual se hace una llamada al rol 'borrar_logs'.
