@@ -1,0 +1,13 @@
+-
+  name: "Borrar logs antiguos (+30 dias)"
+  hosts: all
+  become: true
+  tasks:
+
+    # Playbook principal desde el cual se hace una llamada al rol 'borrar_logs'.
+
+    -
+      name:
+      import_role:
+        name: borrar_logs
+

@@ -1,0 +1,27 @@
+
+  # Realiza una búsqueda de logs en un directorio definido en una varialbe y con una antiguedad definida en otra variable, y almacena los resultados en la variable 'logs'.
+
+-
+  name: Buscar logs +30 dias
+  find:
+    paths: "{{ path }}"
+    patterns: 
+      - "*.log*"
+    age: "{{ dias }}"
+    recurse: yes 
+  register: logs
+
+
+  #Recorre los ficheros almacenados en la variable logs, y los borra.
+
+# - 
+#   name: Borrar logs de +30 dias
+#   file:
+#     path: '{{ item.path }}'
+#     state: absent
+#   with_items: '{{ logs.files}}'
+
+-
+  name:
+  debug:
+    msg: "{{ logs.files | length }}"
