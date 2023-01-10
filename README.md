@@ -38,7 +38,7 @@ El rol contiene una serie de variables para definir tanto el directorio donde se
   
 ```
 path: /var/log/
-dias: 30d
+dias: 30
 ```
 
   
@@ -72,7 +72,7 @@ dias: 30d
 		paths: "{{ path }}"
 		patterns:
 			- '*.log'
-		age: "{{ age }}"
+		age: "{{ age }}d"
 		recurse: yes
 	register: logs
 

@@ -7,7 +7,7 @@
     paths: "{{ path }}"
     patterns: 
       - "*.log*"
-    age: "{{ dias }}"
+    age: "{{ dias }}d"
     recurse: yes 
   register: logs
 
